@@ -3,6 +3,9 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	css: ['~/assets/css/main.css'],
 	modules: ['nuxt-icon', '@nuxt/content', '@nuxtjs/apollo'],
+	runtimeConfig: {
+		githubToken: process.env.GITHUB_TOKEN,
+	},
 	content: {
 		// https://content.nuxtjs.org/api/configuration
 		highlight: {
@@ -13,7 +16,8 @@ export default defineNuxtConfig({
 	apollo: {
 		clients: {
 			default: {
-				httpEndpoint: 'https://api.spacex.land/graphql',
+				tokenName: 'github-token',
+				httpEndpoint: 'https://api.github.com/graphql',
 			},
 		},
 	},

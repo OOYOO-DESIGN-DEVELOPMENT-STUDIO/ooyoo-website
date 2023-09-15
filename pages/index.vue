@@ -48,8 +48,8 @@ const { data: posts } = await useAsyncData('latest-posts', () =>
 			<Post :posts="posts" />
 		</div>
 	</section>
-	<button class="btn flex">
+	<!-- <button class="btn flex">
 		<i class="material-icons mr-2">add_shopping_cart</i>
 		<span>Add to cart</span>
-	</button>
+	</button> -->
 </template>
